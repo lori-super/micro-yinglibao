@@ -29,4 +29,7 @@
         bid_min_limit,bid_max_limit,product_status,
         product_full_time,product_desc,version
     </sql>
+    <select id="avgRate" resultType="java.math.BigDecimal">
+        select avg(rate) from b_loan_info
+    </select>
 </mapper>

@@ -17,4 +17,7 @@
         id,loan_id,uid,
         bid_money,bid_time,bid_status
     </sql>
+    <select id="sumSales" resultType="java.math.BigDecimal">
+        select sum(bid_money) from p2p.b_bid_info
+    </select>
 </mapper>

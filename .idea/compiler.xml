@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="micro-common" />
+        <module name="micro-web" />
         <module name="micro-api" />
         <module name="micro-dataservice" />
+        <module name="micro-common" />
       </profile>
     </annotationProcessing>
   </component>

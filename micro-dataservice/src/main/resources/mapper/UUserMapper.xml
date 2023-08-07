@@ -20,4 +20,7 @@
         name,id_card,add_time,
         last_login_time,header_image
     </sql>
+    <select id="countUser" resultType="java.lang.Integer">
+        select count(id) from u_user
+    </select>
 </mapper>

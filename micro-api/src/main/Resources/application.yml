@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: micro-api
+dubbo:
+  registry:
+    address: zookeeper://localhost:2181
+  scan:
+    base-packages: com.micro.service
+  provider:
+    timeout: 2000
+    retries: 0

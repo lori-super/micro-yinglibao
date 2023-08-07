@@ -4,6 +4,8 @@ import com.micro.entity.BLoanInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.math.BigDecimal;
+
 /**
 * @author rechao
 * @description 针对表【b_loan_info(产品信息表)】的数据库操作Mapper
@@ -13,6 +15,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface BLoanInfoMapper extends BaseMapper<BLoanInfo> {
 
+    BigDecimal avgRate();
 }
 
 

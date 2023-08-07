@@ -11,6 +11,7 @@
         <module>../micro-api</module>
         <module>../micro-dataservice</module>
         <module>../micro-common</module>
+        <module>../micro-web</module>
     </modules>
 
     <properties>
@@ -23,6 +24,7 @@
         <client.version>4.5.13</client.version>
         <dubbo.version>2.7.8</dubbo.version>
         <mybatis-plus.version>3.4.3</mybatis-plus.version>
+
     </properties>
 
     <dependencyManagement>
@@ -58,6 +60,13 @@
                 <artifactId>dubbo-spring-boot-starter</artifactId>
                 <version>${dubbo.version}</version>
             </dependency>
+
+<!--            &lt;!&ndash;swagger依赖&ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.github.xiaoymin</groupId>-->
+<!--                <artifactId>knife4j-spring-boot-starter</artifactId>-->
+<!--                <version>${knife4j}</version>-->
+<!--            </dependency>-->
 
             <!--zookeeper依赖-->
             <dependency>
