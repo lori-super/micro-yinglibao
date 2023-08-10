@@ -1,4 +1,4 @@
-package com.microapi;
+package com.mircro;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @EnableDubbo
-public class MicroApiApplication {
+public class MicroCommonApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MicroApiApplication.class, args);
+        SpringApplication.run(MicroCommonApplication.class, args);
     }
 
 }

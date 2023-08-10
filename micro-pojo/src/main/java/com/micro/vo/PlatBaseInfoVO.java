@@ -1,4 +1,4 @@
-package com.microapi.dto;
+package com.micro.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PlatBaseInfoDTO implements Serializable {
+public class PlatBaseInfoVO implements Serializable {
     /**
      * 注册用户数
      */

@@ -2,6 +2,7 @@ package com.micro.entity;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import lombok.Builder;
@@ -14,6 +15,8 @@ import lombok.Data;
 @Data
 @Builder
 public class BLoanInfo implements Serializable {
+
+
     /**
      * 
      */
@@ -37,7 +40,7 @@ public class BLoanInfo implements Serializable {
     /**
      * 产品发布时间
      */
-    private Date releaseTime;
+    private LocalDateTime releaseTime;
 
     /**
      * 产品类型 0新手宝，1优选产品，2散标产品
@@ -77,7 +80,7 @@ public class BLoanInfo implements Serializable {
     /**
      * 产品投资满标时间
      */
-    private Date productFullTime;
+    private LocalDateTime productFullTime;
 
     /**
      * 产品描述

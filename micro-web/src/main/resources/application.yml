@@ -17,3 +17,8 @@ server:
   servlet:
     context-path: /api
 
+logging:
+  level:
+    com:
+      microweb:
+        controller: info

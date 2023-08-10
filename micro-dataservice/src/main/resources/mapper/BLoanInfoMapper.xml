@@ -32,4 +32,14 @@
     <select id="avgRate" resultType="java.math.BigDecimal">
         select avg(rate) from b_loan_info
     </select>
+
+    <select id="queryPageProduct" resultType="com.micro.entity.BLoanInfo">
+        select <include refid="Base_Column_List"/> from p2p.b_loan_info
+        <where>
+            <if test="product_type != null ">
+                and product_type = #{productType}
+            </if>
+        </where>
+        order by release_time desc
+    </select>
 </mapper>

@@ -5,8 +5,7 @@ package com.micro.service;
 import com.micro.mapper.BBidInfoMapper;
 import com.micro.mapper.BLoanInfoMapper;
 import com.micro.mapper.UUserMapper;
-import com.microapi.dto.PlatBaseInfoDTO;
-import com.microapi.service.PlatBaseInfoService;
+import com.micro.vo.PlatBaseInfoVO;
 import org.apache.dubbo.config.annotation.DubboService;
 
 
@@ -24,10 +23,10 @@ public class PlatBaseInfoServiceImpl implements PlatBaseInfoService {
     private BBidInfoMapper bBidInfoMapper;
 
     @Override
-    public PlatBaseInfoDTO queryPlatBaseInfo() {
+    public PlatBaseInfoVO queryPlatBaseInfo() {
         Integer countUser = uUserMapper.countUser();
         BigDecimal avgRate = bLoanInfoMapper.avgRate();
         BigDecimal sumSales = bBidInfoMapper.sumSales();
-        return PlatBaseInfoDTO.builder().registerUsers(countUser).sumMoney(sumSales).avgRate(avgRate).build();
+        return PlatBaseInfoVO.builder().registerUsers(countUser).sumMoney(sumSales).avgRate(avgRate).build();
     }
 }

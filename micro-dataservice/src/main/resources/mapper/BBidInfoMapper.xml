@@ -20,4 +20,8 @@
     <select id="sumSales" resultType="java.math.BigDecimal">
         select sum(bid_money) from p2p.b_bid_info
     </select>
+    <select id="queryInvestSum" resultType="com.micro.vo.InvestRankVO">
+        select uu.phone as phone, sum(bid_money) as money from p2p.b_bid_info bi, p2p.u_user uu
+        where bi.uid = uu.id group by phone order by money desc
+    </select>
 </mapper>

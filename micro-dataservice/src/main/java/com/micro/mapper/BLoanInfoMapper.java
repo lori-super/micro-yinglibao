@@ -1,5 +1,6 @@
 package com.micro.mapper;
 
+import com.github.pagehelper.Page;
 import com.micro.entity.BLoanInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
@@ -16,6 +17,8 @@ import java.math.BigDecimal;
 public interface BLoanInfoMapper extends BaseMapper<BLoanInfo> {
 
     BigDecimal avgRate();
+
+    Page<BLoanInfo> queryPageProduct(Integer productType);
 }
 
 

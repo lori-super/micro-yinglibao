@@ -1,4 +1,4 @@
-package com.mircrocommon.result;
+package com.mircro.result;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

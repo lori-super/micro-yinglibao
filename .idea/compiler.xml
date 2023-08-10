@@ -11,6 +11,7 @@
         <module name="micro-api" />
         <module name="micro-dataservice" />
         <module name="micro-common" />
+        <module name="micro-pojo" />
       </profile>
     </annotationProcessing>
   </component>

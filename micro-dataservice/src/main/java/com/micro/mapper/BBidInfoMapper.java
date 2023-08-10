@@ -2,9 +2,12 @@ package com.micro.mapper;
 
 import com.micro.entity.BBidInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.micro.vo.InvestRankVO;
+import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
 * @author rechao
@@ -16,6 +19,8 @@ import java.math.BigDecimal;
 public interface BBidInfoMapper extends BaseMapper<BBidInfo> {
 
     BigDecimal sumSales();
+
+    List<InvestRankVO> queryInvestSum();
 }
 
 
