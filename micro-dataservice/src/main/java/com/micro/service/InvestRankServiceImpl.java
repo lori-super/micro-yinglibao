@@ -7,6 +7,7 @@ import com.micro.vo.InvestRankVO;
 import com.mircro.constant.RedisConstant;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.ZSetOperations;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -24,14 +25,12 @@ public class InvestRankServiceImpl extends ServiceImpl<BBidInfoMapper, BBidInfo>
 
     @Override
     public List<InvestRankVO> investRankList() {
-        Set<String> investRange = stringRedisTemplate.opsForZSet().range(RedisConstant.INVEST_RANK, 0, 2);
+        Set<ZSetOperations.TypedTuple<String>> typedTuples = stringRedisTemplate.opsForZSet().reverseRangeWithScores(RedisConstant.INVEST_RANK, 0, 2);
         List<InvestRankVO> list = new ArrayList<>();
-        if (investRange != null && investRange.size() != 0) {
-            investRange.forEach(item ->{
-                Double score = stringRedisTemplate.opsForZSet().score(RedisConstant.INVEST_RANK, item);
-                list.add(new InvestRankVO(score, item));
+        if (typedTuples != null && typedTuples.size() != 0) {
+            typedTuples.forEach(item ->{
+                list.add(InvestRankVO.builder().phone(item.getValue()).money(item.getScore()).build());
             });
-            Collections.reverse(list);
             return list;
         }
 

@@ -17,7 +17,7 @@ public class Result<T> implements Serializable {
     private Integer code;
 
     // 错误后，给前端返回的信息
-    private String msg;
+    private String msg = "";
 
     //接收的对象
     private T data;
