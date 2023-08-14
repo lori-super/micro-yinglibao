@@ -18,4 +18,10 @@ public class PageResult implements Serializable {
     private Long total;
     // 分页返回的记录
     private List records;
+    // 页码
+    private Integer pageNumber;
+    //页面大小
+    private Integer pageSize;
+    // 总共几页
+    private Integer totalPage;
 }

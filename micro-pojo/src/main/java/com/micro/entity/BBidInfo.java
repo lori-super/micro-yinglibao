@@ -2,6 +2,7 @@ package com.micro.entity;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import lombok.Builder;
@@ -37,7 +38,7 @@ public class BBidInfo implements Serializable {
     /**
      * 投标时间
      */
-    private Date bidTime;
+    private LocalDateTime bidTime;
 
     /**
      * 投标状态

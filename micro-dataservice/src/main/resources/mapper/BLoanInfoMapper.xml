@@ -42,4 +42,7 @@
         </where>
         order by release_time desc
     </select>
+    <select id="queryById" resultType="com.micro.entity.BLoanInfo">
+        select <include refid="Base_Column_List"/> from p2p.b_loan_info where id = #{productId}
+    </select>
 </mapper>

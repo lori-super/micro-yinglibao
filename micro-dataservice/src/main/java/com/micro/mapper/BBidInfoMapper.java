@@ -1,5 +1,6 @@
 package com.micro.mapper;
 
+import com.micro.dto.BidInfoWithUserDTO;
 import com.micro.entity.BBidInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.micro.vo.InvestRankVO;
@@ -21,6 +22,8 @@ public interface BBidInfoMapper extends BaseMapper<BBidInfo> {
     BigDecimal sumSales();
 
     List<InvestRankVO> queryInvestSum();
+
+    List<BidInfoWithUserDTO> queryBidInfoWithPhone(Integer productId);
 }
 
 

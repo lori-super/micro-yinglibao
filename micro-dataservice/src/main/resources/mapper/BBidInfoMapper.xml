@@ -24,4 +24,12 @@
         select uu.phone as phone, sum(bid_money) as money from p2p.b_bid_info bi, p2p.u_user uu
         where bi.uid = uu.id group by phone order by money desc
     </select>
+    <select id="queryBidInfoWithPhone" resultType="com.micro.dto.BidInfoWithUserDTO">
+        select u.phone as phone, sum(b.bid_money) as bidMoney, b.bid_time as bidTime
+        from p2p.b_bid_info as b inner join p2p.u_user as u on b.uid = u.id
+        where b.loan_id = #{productId}
+        GROUP BY
+            u.phone,
+            b.bid_time
+    </select>
 </mapper>

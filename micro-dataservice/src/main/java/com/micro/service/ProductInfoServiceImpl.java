@@ -1,6 +1,7 @@
 package com.micro.service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.github.pagehelper.IPage;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.micro.entity.BLoanInfo;
@@ -53,6 +54,7 @@ public class ProductInfoServiceImpl extends ServiceImpl<BLoanInfoMapper, BLoanIn
 
         PageHelper.startPage(page, pageSize);
         Page<BLoanInfo> bLoanInfos = bLoanInfoMapper.queryPageProduct(productType);
-        return new PageResult(bLoanInfos.getTotal(), bLoanInfos.getResult());
+        return PageResult.builder().pageNumber(bLoanInfos.getPageNum()).pageSize(bLoanInfos.getPageSize())
+                .totalPage(bLoanInfos.getPages()).total(bLoanInfos.getTotal()).records(bLoanInfos.getResult()).build();
     }
 }
