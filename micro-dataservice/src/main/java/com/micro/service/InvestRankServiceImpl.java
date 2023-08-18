@@ -4,17 +4,15 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.micro.entity.BBidInfo;
 import com.micro.mapper.BBidInfoMapper;
 import com.micro.vo.InvestRankVO;
-import com.mircro.constant.RedisConstant;
+import com.micro.constant.RedisConstant;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @DubboService(interfaceClass = InvestRankService.class, version = "1.0")
 public class InvestRankServiceImpl extends ServiceImpl<BBidInfoMapper, BBidInfo> implements InvestRankService {

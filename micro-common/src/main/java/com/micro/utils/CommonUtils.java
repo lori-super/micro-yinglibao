@@ -1,6 +1,6 @@
-package com.mircro.phone;
+package com.micro.utils;
 
-import com.mircro.exception.PhoneFormatException;
+import com.micro.exception.PhoneFormatException;
 import org.apache.dubbo.common.utils.StringUtils;
 
 public class CommonUtils {

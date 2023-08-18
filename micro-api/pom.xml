@@ -52,12 +52,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.mircro-common</groupId>
-            <artifactId>micro-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
             <groupId>com.micro-pojo</groupId>
             <artifactId>micro-pojo</artifactId>
             <version>0.0.1-SNAPSHOT</version>
@@ -66,6 +60,12 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mircro-common</groupId>
+            <artifactId>micro-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

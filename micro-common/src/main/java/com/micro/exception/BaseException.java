@@ -1,4 +1,4 @@
-package com.mircro.exception;
+package com.micro.exception;
 
 public class BaseException extends RuntimeException{
 

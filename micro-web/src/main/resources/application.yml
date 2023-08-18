@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: dev
   application:
     name: micro-web
   redis:
@@ -22,3 +24,8 @@ logging:
     com:
       microweb:
         controller: info
+p2p:
+  alisms:
+    access-key-id: ${p2p.aliSms.access-key-id}
+    access-key-secret: ${p2p.aliSms.access-key-secret}
+    endpoint: ${p2p.aliSms.endpoint}

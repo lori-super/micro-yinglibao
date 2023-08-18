@@ -1,7 +1,7 @@
 package com.micro.service;
 
 import com.micro.vo.ProductDetailVO;
-import com.mircro.result.Result;
+import com.micro.result.Result;
 
 public interface ProductDetailService {
 

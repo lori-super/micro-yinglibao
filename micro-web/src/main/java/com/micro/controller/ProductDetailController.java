@@ -1,7 +1,7 @@
 package com.micro.controller;
 
 import com.micro.vo.ProductDetailVO;
-import com.mircro.result.Result;
+import com.micro.result.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

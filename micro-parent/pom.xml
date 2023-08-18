@@ -27,11 +27,18 @@
         <mybatis-plus.version>3.4.3</mybatis-plus.version>
         <knife4j>3.0.2</knife4j>
         <jjwt>0.9.1</jjwt>
+        <hutool.version>5.8.16</hutool.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
 
+            <!--hutool-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>

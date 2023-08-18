@@ -1,4 +1,4 @@
-package com.mircro.result;
+package com.micro.result;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,6 +12,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Result<T> implements Serializable {
+
+    public static final Integer FAIL = 0;
+    public static final Integer SUCCESS = 1;
 
     // 1 成功 0 失败
     private Integer code;

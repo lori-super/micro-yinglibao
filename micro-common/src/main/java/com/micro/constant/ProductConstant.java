@@ -1,4 +1,4 @@
-package com.mircro.constant;
+package com.micro.constant;
 
 public class ProductConstant {
     public static final Integer xinshoubao = 0;

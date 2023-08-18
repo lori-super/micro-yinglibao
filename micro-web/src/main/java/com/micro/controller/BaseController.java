@@ -1,13 +1,14 @@
 package com.micro.controller;
 
-import com.micro.service.InvestRankService;
-import com.micro.service.PlatBaseInfoService;
-import com.micro.service.ProductDetailService;
-import com.micro.service.ProductInfoService;
+import com.micro.properties.AliSmsProperties;
+import com.micro.service.*;
 import org.apache.dubbo.config.annotation.DubboReference;
 
-public class BaseController {
+import javax.annotation.Resource;
 
+public class BaseController {
+    @Resource
+    protected AliSmsProperties aliSmsProperties;
     @DubboReference(interfaceClass = PlatBaseInfoService.class, version = "1.0")
     protected PlatBaseInfoService platBaseInfoService;
 
@@ -19,4 +20,7 @@ public class BaseController {
 
     @DubboReference(interfaceClass = ProductDetailService.class, version = "1.0")
     protected ProductDetailService productDetailService;
+
+    @DubboReference(interfaceClass = UserService.class, version = "1.0")
+    protected UserService userService;
 }

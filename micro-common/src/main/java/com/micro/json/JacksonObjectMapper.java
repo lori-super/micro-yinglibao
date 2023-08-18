@@ -1,4 +1,4 @@
-package com.mircro.json;
+package com.micro.json;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
