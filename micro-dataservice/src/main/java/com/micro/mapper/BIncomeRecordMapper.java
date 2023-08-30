@@ -1,7 +1,9 @@
 package com.micro.mapper;
 
+import com.github.pagehelper.Page;
 import com.micro.entity.BIncomeRecord;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.micro.vo.IncomeRecordVO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -13,6 +15,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface BIncomeRecordMapper extends BaseMapper<BIncomeRecord> {
 
+    Page<IncomeRecordVO> queryUserIncomeRecord(Integer uid);
 }
 
 

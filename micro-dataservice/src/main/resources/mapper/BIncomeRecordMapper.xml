@@ -20,4 +20,9 @@
         bid_id,bid_money,income_date,
         income_money,income_status
     </sql>
+    <select id="queryUserIncomeRecord" resultType="com.micro.vo.IncomeRecordVO">
+        select i.id as id, i.income_date as income_date, i.income_money as income_money, l.product_name as product_name
+        from b_income_record as i inner join b_loan_info as l on i.loan_id = l.id
+        where i.uid = #{uid} order by i.income_date desc
+    </select>
 </mapper>

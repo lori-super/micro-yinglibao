@@ -23,4 +23,7 @@ public class BaseController {
 
     @DubboReference(interfaceClass = UserService.class, version = "1.0")
     protected UserService userService;
+
+    @DubboReference(interfaceClass = UserInvestService.class, version = "1.0")
+    protected UserInvestService userInvestService ;
 }

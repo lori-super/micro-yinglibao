@@ -1,8 +1,10 @@
 package com.micro.mapper;
 
+import com.github.pagehelper.Page;
 import com.micro.dto.BidInfoWithUserDTO;
 import com.micro.entity.BBidInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.micro.vo.BidInfoVO;
 import com.micro.vo.InvestRankVO;
 import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Mapper;
@@ -24,6 +26,8 @@ public interface BBidInfoMapper extends BaseMapper<BBidInfo> {
     List<InvestRankVO> queryInvestSum();
 
     List<BidInfoWithUserDTO> queryBidInfoWithPhone(Integer productId);
+
+    Page<BidInfoVO> queryBidInfoRecord(Integer uid);
 }
 
 

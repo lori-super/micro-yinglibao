@@ -9,7 +9,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin
 @RequestMapping("/v1/product")
 @Api(tags = "首页产品信息接口")
 @Slf4j
@@ -19,7 +18,7 @@ public class IndexProductController extends BaseController {
     @ApiOperation("返回首页产品")
     public Result<IndexProductInfoVO> indexPageProduct(){
         log.info("首页产品展示");
-        return Result.sucess(productInfoService.queryProductInfoPage());
+        return Result.success(productInfoService.queryProductInfoPage());
     }
 
     @GetMapping("/list")
@@ -28,7 +27,7 @@ public class IndexProductController extends BaseController {
                                           @RequestParam(defaultValue = "9", required = false, value = "pageSize") Integer pageSize,
                                           @RequestParam(value = "productType") Integer productType){
         log.info("分页产品结果展示, 页码={}, 页面大小={} , 产品类型{}", page, pageSize, productType);
-        return Result.sucess(productInfoService.queryProductList(page, pageSize, productType));
+        return Result.success(productInfoService.queryProductList(page, pageSize, productType));
     }
 
 }

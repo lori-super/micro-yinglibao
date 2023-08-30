@@ -55,11 +55,6 @@
             <type>pom</type>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.github.xiaoymin</groupId>-->
-<!--            <artifactId>knife4j-spring-boot-starter</artifactId>-->
-<!--        </dependency>-->
-
         <dependency>
             <groupId>com.micro-api</groupId>
             <artifactId>micro-api</artifactId>
@@ -94,6 +89,17 @@
             <groupId>com.mircro-common</groupId>
             <artifactId>micro-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.micro-pojo</groupId>
+            <artifactId>micro-pojo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
         </dependency>
 
         <dependency>

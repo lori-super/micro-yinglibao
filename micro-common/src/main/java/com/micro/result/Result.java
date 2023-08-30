@@ -26,7 +26,7 @@ public class Result<T> implements Serializable {
     private T data;
 
 
-    public static <T> Result<T> sucess(){
+    public static <T> Result<T> success(){
         Result<T> result = new Result<>();
         result.code = 1;
         return result;
@@ -39,7 +39,7 @@ public class Result<T> implements Serializable {
         return result;
     }
 
-    public static <T> Result<T> sucess(T object){
+    public static <T> Result<T> success(T object){
         Result<T> result = new Result<>();
         result.code = 1;
         result.data = object;

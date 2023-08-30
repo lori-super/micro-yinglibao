@@ -35,6 +35,6 @@ public class ProductDetailServiceImpl extends ServiceImpl<BBidInfoMapper, BBidIn
         }).collect(Collectors.toList());
 
         BLoanInfo bLoanInfo = bLoanInfoMapper.queryById(productId);
-        return Result.sucess(ProductDetailVO.builder().bLoanInfo(bLoanInfo).investRecords(collect).build());
+        return Result.success(ProductDetailVO.builder().bLoanInfo(bLoanInfo).investRecords(collect).build());
     }
 }

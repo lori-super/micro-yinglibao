@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/v1/product")
 @Api(tags = "产品详情接口类")
 @Slf4j
-@CrossOrigin
 public class ProductDetailController extends BaseController{
 
     @GetMapping("/detail/{id}")

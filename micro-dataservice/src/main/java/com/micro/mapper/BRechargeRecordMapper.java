@@ -1,8 +1,12 @@
 package com.micro.mapper;
 
+import com.github.pagehelper.Page;
 import com.micro.entity.BRechargeRecord;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 /**
 * @author rechao
@@ -13,6 +17,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface BRechargeRecordMapper extends BaseMapper<BRechargeRecord> {
 
+    Page<BRechargeRecord> queryUserRechargeRecord(Integer uid);
 }
 
 

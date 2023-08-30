@@ -64,6 +64,17 @@
             <artifactId>dysmsapi20170525</artifactId>
             <version>2.0.24</version>
         </dependency>
+        <dependency>
+            <groupId>com.micro-pojo</groupId>
+            <artifactId>micro-pojo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
 
     </dependencies>
 

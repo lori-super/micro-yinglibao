@@ -16,14 +16,13 @@ import java.util.List;
 @RequestMapping("/v1/invest")
 @Api(tags = "投资排行榜")
 @Slf4j
-@CrossOrigin
 public class InvestRankController extends BaseController{
 
     @GetMapping("/rank")
     @ApiOperation("投资排行榜")
     public Result<List<InvestRankVO>> investRank(){
         log.info("投资排行榜");
-        return Result.sucess(investRankService.investRankList());
+        return Result.success(investRankService.investRankList());
     }
 
 }

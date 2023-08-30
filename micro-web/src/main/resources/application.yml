@@ -29,3 +29,5 @@ p2p:
     access-key-id: ${p2p.aliSms.access-key-id}
     access-key-secret: ${p2p.aliSms.access-key-secret}
     endpoint: ${p2p.aliSms.endpoint}
+  aliidcard:
+    appcode: 09783177d13c42ef92793f1e9523e598

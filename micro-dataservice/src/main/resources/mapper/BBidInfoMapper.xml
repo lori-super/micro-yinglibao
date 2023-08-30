@@ -32,4 +32,9 @@
             u.phone,
             b.bid_time
     </select>
+    <select id="queryBidInfoRecord" resultType="com.micro.vo.BidInfoVO">
+        select i.id as id, i.bid_time as bid_time, i.bid_money as bid_money, l.product_name as product_name
+        from b_bid_info as i inner join b_loan_info as l on i.loan_id = l.id
+        where i.uid = #{uid} order by i.bid_time desc
+    </select>
 </mapper>

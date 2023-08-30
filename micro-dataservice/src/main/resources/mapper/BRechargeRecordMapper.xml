@@ -20,4 +20,7 @@
         recharge_status,recharge_money,recharge_time,
         recharge_desc,channel
     </sql>
+    <select id="queryUserRechargeRecord" resultType="com.micro.entity.BRechargeRecord">
+        select <include refid="Base_Column_List"/> from b_recharge_record where uid = #{uid} order by recharge_time desc
+    </select>
 </mapper>
